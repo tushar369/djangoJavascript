@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+.img2 {
+  margin-top: -58px;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  transform-style: preserve-3d;
+  width: 100%;
+  overflow: hidden;
+  box-shadow: inset 0 0 50px 6px rgb(0, 0, 0);
+}
+
+.container .box {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  margin: 40px;
+  background: rgba(179, 178, 178, 0.15);
+  /* background-image: linear-gradient(
+    to bottom,
+    #272727 0%,
+    rgb(14, 14, 14) 100%
+  ); */
+  border-radius: 20px;
+  transform-style: preserve-3d;
+  transition: ease-in-out;
+}
+
+.container .box::before {
+  content: "NIKE";
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 6em;
+  font-weight: 900;
+  color: #fff;
+  font-style: italic;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.container .box::after {
+  content: "SHOES";
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 5em;
+  font-weight: 900;
+  color: #fff;
+  font-style: italic;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.container .box:hover::before,
+.container .box:hover::after {
+  opacity: 0.05;
+}
+
+.container .box .name {
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+  color: #fff;
+  width: 100%;
+  transform-style: preserve-3d;
+  transform: translate3d(0, 0, 75px);
+  transition: 0.5s;
+  opacity: 0;
+  z-index: 10;
+}
+
+.container .box:hover .name {
+  top: 40px;
+  opacity: 0.97;
+}
+
+.container .box .buy {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform-style: preserve-3d;
+  transform: translate3d(-50%, 0, 75px);
+  color: #fff;
+  background: #333;
+  padding: 10px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.6s;
+  opacity: 0;
+}
+
+.container .box:hover .buy {
+  opacity: 1;
+  bottom: 30px;
+}
+
+.container .box .circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  transition: 0.5s;
+  background: #fff;
+  transform-style: preserve-3d;
+  transform: translate3d(-50%, -50%, 10px);
+  z-index: 10;
+  opacity: 1;
+}
+
+.container .box .product {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 300px;
+  transition: 0.7s;
+  z-index: 11;
+  transform-style: preserve-3d;
+  transform: translate3d(-50%, -50%, 11px) rotate(-15deg);
+}
+
+.container .box:hover .product {
+  transform: translate3d(-50%, -50%, 100px) rotate(-15deg);
+}
+
+.container .box:nth-child(1) .circle {
+  /* background: #8bc42a; */
+  background: linear-gradient(to right, #e7e738, #24fe41);
+}
+.container .box:nth-child(1) .buy {
+  background: #8bc42a;
+}
+
+.container .box:nth-child(2) .circle {
+  background: linear-gradient(to right, #ec008c, #fc6767);
+}
+.container .box:nth-child(2) .buy {
+  background: #d7778f;
+}
+
+.container .box:nth-child(3) .circle {
+  background: linear-gradient(to right, #1488cc, #2b32b2);
+}
+.container .box:nth-child(3) .buy {
+  background: #3a88d1;
+}

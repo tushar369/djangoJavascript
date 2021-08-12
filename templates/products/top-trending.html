@@ -1,0 +1,49 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/products/products.css' %}" />
+<div>
+  <div class="container">
+    <div class="box" id="tbox1">
+      <h2 class="name">Nike Air</h2>
+      <a href="#" class="buy">Buy Now</a>
+      <div class="circle"></div>
+      <img
+        src="{% static 'images/shoe1.png' %}"
+        alt="none"
+        class="img1 product"
+      />
+    </div>
+    <div class="box" id="tbox2">
+      <h2 class="name">Nike Runner</h2>
+      <a href="#" class="buy">Buy Now</a>
+      <div class="circle"></div>
+      <img
+        src="{% static 'images/shoe2.png' %}"
+        alt="none"
+        class="img2 product"
+      />
+    </div>
+    <div class="box" id="tbox3">
+      <h2 class="name">Nike Runner</h2>
+      <a href="#" class="buy">Buy Now</a>
+      <div class="circle"></div>
+      <img
+        src="{% static 'images/shoe3.png' %}"
+        alt="none"
+        class="img3 product"
+      />
+    </div>
+  </div>
+</div>
+
+<script src="{% static 'js/vanilla-tilt.min.js' %}"></script>
+<script type="text/javascript">
+  VanillaTilt.init(document.querySelectorAll(".box"), {
+    max: 25,
+    speed: 400,
+    // reverse: true,
+    glare: true,
+    "max-glare": 0.4,
+  });
+</script>
+<script src="{% static 'js/toptrending-movement.js' %}"></script>

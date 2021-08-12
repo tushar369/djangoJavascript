@@ -1,0 +1,17 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/navbar.css' %}" />
+<!-- navbar starts -->
+<div class="nav-container">
+  <a href="{% url 'home' %}" class="logo">Store .</a>
+  <div class="circle"></div>
+  <a class="nav-button">New Arrivals</a>
+  <a class="nav-button">Men</a>
+  <a class="nav-button">Women</a>
+  <a class="nav-button">Blog</a>
+  <a href="{% url 'signup' %}" class="nav-button login-signUp">
+    Login/Sign-up
+  </a>
+  <a class="nav-button cart">Cart</a>
+</div>
+<!-- navbar ends -->
